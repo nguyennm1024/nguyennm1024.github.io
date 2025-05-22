@@ -1,10 +1,7 @@
-Nguyen Manh Nguyen graduated with a Bachelor's degree in Information Technology 
-at the University of Engineering and Technology - Vietnam National University (Honors program). 
-He is currently an AI research resident at VinAI Research, under the supervision of 
-Professor Nguyen Minh Hoai (VinAI Research Scientist; Assoc. Prof. Dept. of Computer Science, Stony Brook University) 
-and in close collaboration with Professor Nguyen Huu Thien 
-(VinAI Research Scientist; Assistant. Prof. Dept. of Computer and Information Science, University of Oregon), 
-and Thu Nguyen, a former VinAI resident. His research interests lie in optical character recognition, 
-focusing on scene text recognition. He is also fond of Vision-Language problems, 
-such as scene text visual question answering. During his work at VinAI, 
-he has achieved 1 accepted paper at CVPR in 2021.
+Nguyen (William) Nguyen is currently a Senior Applied Scientist at Aitomatic, where he focuses on developing domain-specific foundation models for industry. He earned his master's degree from the University of Rochester, where he was advised by Professor Chenliang Xu and worked on instructional video understanding and vision-language problems. 
+
+Prior to joining Aitomatic, he spent nearly three years at VinAI Research, working on scene text spotting problems under the supervision of Professor Nguyen Minh Hoai. He completed his bachelor's degree with Distinction at the University of Engineering and Technology - Vietnam National University in 2020, where he collaborated with Professor Hoang Van Xiem.
+
+His research interests span computer vision, natural language processing, and machine learning, with particular focus on optical character recognition and vision-language problems. His recent work includes pioneering domain-specific language models such as SemiKong for the semiconductor industry and Llamarine for the maritime sector. His research has been published in top-tier conferences including CVPR, NAACL, ACM MM, and AAAI, with SemiKong being featured in various media outlets including VentureBeat, Meta AI Blog, and receiving recognition from notable figures like Yann LeCun.
+
+William serves as a reviewer for multiple prestigious conferences including CVPR, WACV, ACMMM, AAAI, NAACL, and ACL.

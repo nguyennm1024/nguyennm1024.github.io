@@ -99,6 +99,8 @@ strong {
 heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
+  display: block;
+  margin-bottom: 0.2em;
 }
 
 papertitle {
@@ -174,4 +176,15 @@ span.highlight {
 
 .twin-ai-button:hover::before {
   left: 100%;
+}
+
+.patent-list {
+  margin-top: 0.1em;
+  margin-bottom: 0.5em;
+  padding-left: 1.2em;
+}
+
+.patent-list li {
+  margin-bottom: 0.5em;
+  padding-bottom: 0;
 }

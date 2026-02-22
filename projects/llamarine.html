@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Llamarine: Open-source Maritime Industry-specific LLM — Nguyen (William) Nguyen</title>
+  <meta name="author" content="Nguyen (William) Nguyen">
+  <meta name="description" content="Llamarine is the first open-source domain-specific LLM for the maritime industry, outperforming GPT-4o, Claude-3.5-Sonnet, and Llama3 models on navigation and regulatory compliance tasks.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Llamarine: Open-source Maritime Industry-specific LLM — Nguyen (William) Nguyen">
+  <meta property="og:description" content="The first open-source domain-specific LLM for the maritime industry, outperforming GPT-4o and Claude-3.5-Sonnet.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nguyennm1024.github.io/projects/llamarine.html">
+  <meta property="og:image" content="https://nguyennm1024.github.io/images/llamarine.png">
+
+  <link rel="canonical" href="https://nguyennm1024.github.io/projects/llamarine.html">
+  <link rel="icon" type="image/png" href="../images/buffalo_icon.png">
+  <link rel="stylesheet" href="../stylesheet.css">
+</head>
+
+<body>
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">William Nguyen</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul id="nav-menu" class="nav-links" role="menubar">
+        <li role="none"><a href="../index.html#about" role="menuitem">About</a></li>
+        <li role="none"><a href="../index.html#news" role="menuitem">News</a></li>
+        <li role="none"><a href="../index.html#featured-work" role="menuitem">Featured Work</a></li>
+        <li role="none"><a href="../index.html#publications" role="menuitem">Publications</a></li>
+        <li role="none"><a href="../index.html#patents" role="menuitem">Patents</a></li>
+        <li role="none"><a href="../index.html#experience" role="menuitem">Experience</a></li>
+        <li role="none"><a href="../index.html#services" role="menuitem">Academic Service</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Project Hero -->
+    <section class="section project-hero">
+      <div class="container">
+        <a href="../index.html#featured-work" class="back-link">&larr; Back to all work</a>
+        <h1 class="project-title">Llamarine: Open-source Maritime Industry-specific Large Language Model</h1>
+        <p class="paper-authors">
+          <strong>William Nguyen</strong>,
+          An Phan,
+          Konobu Kimura,
+          Hitoshi Maeno,
+          Mika Tanaka,
+          Quynh Le,
+          William Poucher,
+          <a href="https://scholar.google.com/citations?user=3KvkkfoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Christopher Nguyen</a>
+        </p>
+        <p class="paper-venue"><em>Annual Conference of the Japanese Society for Artificial Intelligence</em>, 2025</p>
+        <div class="paper-links">
+          <a href="https://arxiv.org/abs/2503.00203" target="_blank" rel="noopener noreferrer">paper</a>
+          <a href="https://huggingface.co/pentagoniac/llamarine" target="_blank" rel="noopener noreferrer">model</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Image -->
+    <section class="section project-figure">
+      <div class="container">
+        <figure class="project-main-figure">
+          <img src="../images/llamarine.png" alt="Llamarine maritime LLM overview showing domain-specific training pipeline and evaluation framework">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Why This Matters -->
+    <section class="section project-abstract">
+      <div class="container">
+        <h2 class="section-heading">Why This Matters</h2>
+        <p>Maritime navigation is a safety-critical domain where errors can lead to collisions, environmental disasters, and loss of life. Navigators and maritime operators currently lack AI tools that understand the specialized rules, regulations, and physics of ocean navigation. Llamarine is the first open-source LLM built specifically for the maritime industry, providing expert-level knowledge in navigational principles, collision avoidance, route optimization, and regulatory compliance.</p>
+      </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="section project-problem">
+      <div class="container">
+        <h2 class="section-heading">The Problem</h2>
+        <p>General-purpose LLMs have demonstrated potential in complex reasoning tasks, but their broad training leaves them lacking in specialized maritime knowledge. The maritime industry has unique requirements around navigational principles, international regulations (such as collision avoidance rules), route planning, and risk assessment that generic models handle poorly.</p>
+        <p>No publicly available, domain-specific language model existed for maritime navigation, meaning maritime professionals could not leverage AI assistance for critical decision-making tasks without risking inaccurate or unreliable outputs.</p>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="section project-method">
+      <div class="container">
+        <h2 class="section-heading">Approach</h2>
+        <p>Llamarine was developed through continued pretraining and fine-tuning on a high-quality corpus specifically curated for the maritime domain. The training data comprises maritime textbooks, research publications, and web text from Wikipedia, selected from authoritative sources to ensure depth and reliability in the model's knowledge base.</p>
+        <ul class="contributions-list">
+          <li>Curation of a comprehensive maritime dataset from authoritative sources.</li>
+          <li>Development of a foundational model capable of reasoning about complex navigational challenges with greater accuracy than general-purpose LLMs.</li>
+          <li>Establishment of a benchmark to evaluate performance in maritime-specific decision-making tasks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section project-results">
+      <div class="container">
+        <h2 class="section-heading">Key Results</h2>
+        <ul class="contributions-list">
+          <li>Llamarine outperforms both general-purpose and commercial LLMs in critical navigation-related tasks, such as trajectory planning, risk assessment, and compliance with maritime regulations.</li>
+          <li>The model outperforms GPT-4o-mini, GPT-4o, Claude-3.5-Sonnet, and opensource models such as Llama3.1 8B, Llama3.1 70B, and Llama3.3 70B.</li>
+          <li>First open-source domain-specific LLM for the maritime industry.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section project-impact">
+      <div class="container">
+        <h2 class="section-heading">Impact</h2>
+        <p>Llamarine has been adopted by Furuno for a navigation assistant achieving 100% accuracy on regulation-compliant actions. By providing an open-source foundation model trained exclusively on high-quality maritime literature, Llamarine paves the way for AI-driven advancements in maritime safety, efficiency, and operational decision-making. The paper was accepted at JSAI 2025 (Annual Conference of the Japanese Society for Artificial Intelligence).</p>
+      </div>
+    </section>
+
+    <!-- Citation -->
+    <section class="section project-citation">
+      <div class="container">
+        <h2 class="section-heading">Citation</h2>
+        <pre class="citation-block"><code>@article{nguyen2025llamarine,
+  title={Llamarine: Open-source Maritime Industry-specific Large Language Model},
+  author={Nguyen, William and Phan, An and Kimura, Konobu and Maeno, Hitoshi and Tanaka, Mika and Le, Quynh and Poucher, William and Nguyen, Christopher},
+  journal={arXiv preprint arXiv:2503.00203},
+  year={2025}
+}</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>This website uses source code from <a href="https://jonbarron.info" target="_blank" rel="noopener noreferrer">jonbarron.info</a> and <a href="https://www.yapengtian.com" target="_blank" rel="noopener noreferrer">yapengtian.com</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+  (function() {
+    var toggle = document.querySelector('.nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', function() {
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('nav-open');
+    });
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('nav-open');
+      });
+    });
+  })();
+  </script>
+</body>
+
+</html>

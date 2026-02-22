@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SemiKong: Semiconductor Industry-Specific LLM — Nguyen (William) Nguyen</title>
+  <meta name="author" content="Nguyen (William) Nguyen">
+  <meta name="description" content="SemiKong is the first open-source domain-specific LLM for the semiconductor industry, trained on 525.6M tokens of semiconductor literature. Outperforms Claude-3.5-Sonnet, GPT-3.5, and Llama3 70B. Featured in VentureBeat and shared by Yann LeCun.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SemiKong: Semiconductor Industry-Specific LLM — Nguyen (William) Nguyen">
+  <meta property="og:description" content="The first open-source semiconductor-focused LLM, outperforming commercial models. Featured in VentureBeat and shared by Yann LeCun.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nguyennm1024.github.io/projects/semikong.html">
+  <meta property="og:image" content="https://nguyennm1024.github.io/images/semikong.png">
+
+  <link rel="canonical" href="https://nguyennm1024.github.io/projects/semikong.html">
+  <link rel="icon" type="image/png" href="../images/buffalo_icon.png">
+  <link rel="stylesheet" href="../stylesheet.css">
+</head>
+
+<body>
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">William Nguyen</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul id="nav-menu" class="nav-links" role="menubar">
+        <li role="none"><a href="../index.html#about" role="menuitem">About</a></li>
+        <li role="none"><a href="../index.html#news" role="menuitem">News</a></li>
+        <li role="none"><a href="../index.html#featured-work" role="menuitem">Featured Work</a></li>
+        <li role="none"><a href="../index.html#publications" role="menuitem">Publications</a></li>
+        <li role="none"><a href="../index.html#patents" role="menuitem">Patents</a></li>
+        <li role="none"><a href="../index.html#experience" role="menuitem">Experience</a></li>
+        <li role="none"><a href="../index.html#services" role="menuitem">Academic Service</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Project Hero -->
+    <section class="section project-hero">
+      <div class="container">
+        <a href="../index.html#featured-work" class="back-link">&larr; Back to all work</a>
+        <h1 class="project-title">SemiKong: Curating, Training, and Evaluating A Semiconductor Industry-Specific Large Language Model</h1>
+        <p class="paper-authors">
+          <a href="https://scholar.google.com/citations?user=3KvkkfoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Christopher Nguyen</a>,
+          <strong>William Nguyen</strong>,
+          Atsushi Suzuki,
+          Daisuke Oku,
+          Hong An Phan,
+          Sang Dinh,
+          Zooey Nguyen,
+          Anh Hai Ha,
+          <a href="https://www.linkedin.com/in/shrutiraghavan/" target="_blank" rel="noopener noreferrer">Shruti Raghavan</a>,
+          Huy Vo,
+          Thang Nguyen,
+          Lan Nguyen,
+          Yoshikuni Hirayama
+        </p>
+        <p class="paper-venue"><em>OSAI4MU-25 Workshop, AAAI</em>, 2025</p>
+        <div class="paper-links">
+          <a href="https://arxiv.org/abs/2411.13802" target="_blank" rel="noopener noreferrer">paper</a>
+          <a href="https://github.com/aitomatic/semikong" target="_blank" rel="noopener noreferrer">github</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Image -->
+    <section class="section project-figure">
+      <div class="container">
+        <figure class="project-main-figure">
+          <img src="../images/semikong.png" alt="SemiKong semiconductor LLM architecture showing data curation, continued pre-training, and evaluation pipeline">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Why This Matters -->
+    <section class="section project-abstract">
+      <div class="container">
+        <h2 class="section-heading">Why This Matters</h2>
+        <p>Semiconductor manufacturing is one of the most technically demanding industries in the world, yet engineers have had to rely on general-purpose AI tools that lack the specialized knowledge needed for chip design and fabrication. SemiKong is the first open-source large language model built specifically for the semiconductor industry, giving engineers an AI assistant that understands the unique physics, chemistry, and processes of chipmaking.</p>
+      </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="section project-problem">
+      <div class="container">
+        <h2 class="section-heading">The Problem</h2>
+        <p>General-purpose LLMs lack the deep domain expertise required for semiconductor manufacturing tasks. The industry involves highly specialized knowledge about processes like etching, lithography, and deposition, with unique terminology and problem-solving patterns that general models struggle with.</p>
+        <p>There was no publicly available, domain-specific language model tailored to this industry, forcing engineers to either rely on inadequate general tools or proprietary solutions.</p>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="section project-method">
+      <div class="container">
+        <h2 class="section-heading">Approach</h2>
+        <p>The team curated a large-scale semiconductor-specific corpus totaling <strong>525.6 million tokens</strong>, drawn from:</p>
+        <ul class="contributions-list">
+          <li>129 semiconductor books and chapters</li>
+          <li>708 etching-specific research papers</li>
+          <li>20,000 general semiconductor research papers</li>
+          <li>50,000 instruction pairs (covering semiconductor concepts, complex etching problems with mathematical reasoning, and standard etching process questions)</li>
+        </ul>
+        <p>SemiKong was built by performing continued pre-training on Meta's Llama 3 (both 8B and 70B parameter versions), followed by supervised fine-tuning (SFT) on the curated instruction dataset. Post-training steps included quantization (GPTQ) and LoRA adapter merging.</p>
+        <p>The authors also developed a novel evaluation framework with six domain-specific scoring criteria: Clarity and Directness (C&amp;D), Practicality and Immediate Usability (PIU), Efficiency and Brevity (E&amp;B), Logical Flow and Coherence (LFC), Expert-to-Expert Communication (EEC), and Use of Examples and Specificity (UES). The evaluation dataset consists of 987 questions at easy, medium, and hard difficulty levels.</p>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section project-results">
+      <div class="container">
+        <h2 class="section-heading">Key Results</h2>
+        <ul class="contributions-list">
+          <li><strong>SemiKong 70B achieved a total score of 24.02</strong>, outperforming Llama 3 70B (22.35) across all six evaluation metrics.</li>
+          <li><strong>Outperformed all tested commercial models:</strong> Claude-3.5-Sonnet (21.25), Claude-3-Haiku (22.16), Claude-3-Opus (21.75), Command-R (21.20), and GPT-3.5 (17.90).</li>
+          <li><strong>Domain-specific pre-training matters:</strong> SemiKong 8B with both pre-training and SFT (20.81) outperformed the SFT-only version (20.51), which in turn outperformed the base Llama 3 8B (20.49).</li>
+          <li><strong>Training resources:</strong> SemiKong 8B required approximately 150 hours on 4x NVIDIA A100 80GB GPUs; SemiKong 70B required approximately 200 hours on 8x NVIDIA A100 80GB GPUs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Enterprise Adoption -->
+    <section class="section project-impact">
+      <div class="container">
+        <h2 class="section-heading">Enterprise Adoption &amp; Media Coverage</h2>
+        <p>SemiKong has been adopted by Tokyo Electron for root cause analysis, reducing troubleshooting time by 30%. It also received significant media coverage and industry recognition:</p>
+        <ul class="contributions-list">
+          <li>Featured in <a href="https://venturebeat.com/ai/aitomatics-semikong-uses-ai-to-reshape-chipmaking-processes/" target="_blank" rel="noopener noreferrer">VentureBeat</a></li>
+          <li>Covered by <a href="https://www.msn.com/en-us/money/other/semikong-is-the-worlds-first-open-source-semiconductor-focused-llm-it-claims-to-bring-new-chips-to-market-30-faster/ar-AA1wD6nS" target="_blank" rel="noopener noreferrer">MSN</a></li>
+          <li>Shared by <a href="https://www.linkedin.com/posts/yann-lecun_semikong-by-aitomatic-built-with-llama-to-activity-7270625478237945856-cTex/" target="_blank" rel="noopener noreferrer">Yann LeCun</a></li>
+          <li>Featured on <a href="https://ai.meta.com/blog/aitomatic-built-with-llama/" target="_blank" rel="noopener noreferrer">Meta AI Blog</a></li>
+          <li>Covered by <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/semikong-is-the-worlds-first-open-source-semiconductor-focused-llm-it-claims-to-bring-new-chips-to-market-30-percent-faster" target="_blank" rel="noopener noreferrer">Tom's Hardware</a></li>
+          <li>Covered by <a href="https://www.marktechpost.com/2024/12/27/meet-semikong-the-worlds-first-open-source-semiconductor-focused-llm/" target="_blank" rel="noopener noreferrer">MarkTechPost</a></li>
+          <li>Covered by <a href="https://digialps.com/semikong-an-open-source-semiconductor-centric-llm-powered-by-meta-llama-3-1/" target="_blank" rel="noopener noreferrer">Digialps</a></li>
+          <li>Covered by <a href="https://www.gadgets360.com/ai/news/aitomatic-ai-alliance-semikong-model-semiconductor-focused-open-source-meta-7363931" target="_blank" rel="noopener noreferrer">Gadgets360</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Citation -->
+    <section class="section project-citation">
+      <div class="container">
+        <h2 class="section-heading">Citation</h2>
+        <pre class="citation-block"><code>@article{nguyen2024semikong,
+  title={SemiKong: Curating, Training, and Evaluating A Semiconductor Industry-Specific Large Language Model},
+  author={Nguyen, Christopher and Nguyen, William and Suzuki, Atsushi and Oku, Daisuke and Phan, Hong An and Dinh, Sang and Nguyen, Zooey and Ha, Anh Hai and Raghavan, Shruti and Vo, Huy and Nguyen, Thang and Nguyen, Lan and Hirayama, Yoshikuni},
+  journal={arXiv preprint arXiv:2411.13802},
+  year={2024}
+}</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>This website uses source code from <a href="https://jonbarron.info" target="_blank" rel="noopener noreferrer">jonbarron.info</a> and <a href="https://www.yapengtian.com" target="_blank" rel="noopener noreferrer">yapengtian.com</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+  (function() {
+    var toggle = document.querySelector('.nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', function() {
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('nav-open');
+    });
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('nav-open');
+      });
+    });
+  })();
+  </script>
+</body>
+
+</html>

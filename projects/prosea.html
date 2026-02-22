@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProSEA: Problem Solving via Exploration Agents — Nguyen (William) Nguyen</title>
+  <meta name="author" content="Nguyen (William) Nguyen">
+  <meta name="description" content="ProSEA is a multi-agent framework for iterative problem solving through exploration and adaptive replanning. Achieves 93.2% accuracy on FinanceBench, outperforming LlamaIndex RAG, LangChain ReAct, and OpenAI Assistants.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ProSEA: Problem Solving via Exploration Agents — Nguyen (William) Nguyen">
+  <meta property="og:description" content="A multi-agent framework achieving 93.2% accuracy on FinanceBench through iterative exploration and adaptive replanning.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nguyennm1024.github.io/projects/prosea.html">
+  <meta property="og:image" content="https://nguyennm1024.github.io/images/prosea.png">
+
+  <link rel="canonical" href="https://nguyennm1024.github.io/projects/prosea.html">
+  <link rel="icon" type="image/png" href="../images/buffalo_icon.png">
+  <link rel="stylesheet" href="../stylesheet.css">
+</head>
+
+<body>
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">William Nguyen</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul id="nav-menu" class="nav-links" role="menubar">
+        <li role="none"><a href="../index.html#about" role="menuitem">About</a></li>
+        <li role="none"><a href="../index.html#news" role="menuitem">News</a></li>
+        <li role="none"><a href="../index.html#featured-work" role="menuitem">Featured Work</a></li>
+        <li role="none"><a href="../index.html#publications" role="menuitem">Publications</a></li>
+        <li role="none"><a href="../index.html#patents" role="menuitem">Patents</a></li>
+        <li role="none"><a href="../index.html#experience" role="menuitem">Experience</a></li>
+        <li role="none"><a href="../index.html#services" role="menuitem">Academic Service</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Project Hero -->
+    <section class="section project-hero">
+      <div class="container">
+        <a href="../index.html#featured-work" class="back-link">&larr; Back to all work</a>
+        <h1 class="project-title">ProSEA: Problem Solving via Exploration Agents</h1>
+        <p class="paper-authors">
+          <strong>William Nguyen</strong>,
+          <a href="https://www.linkedin.com/in/luongthevinh/" target="_blank" rel="noopener noreferrer">Vinh Luong</a>,
+          <a href="https://scholar.google.com/citations?user=3KvkkfoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Christopher Nguyen</a>
+        </p>
+        <p class="paper-venue"><em>preprint</em>, 2025</p>
+        <div class="paper-links">
+          <a href="https://arxiv.org/abs/2510.07423" target="_blank" rel="noopener noreferrer">paper</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Image -->
+    <section class="section project-figure">
+      <div class="container">
+        <figure class="project-main-figure">
+          <img src="../images/prosea.png" alt="ProSEA hierarchical multi-agent architecture showing Manager Agent, Problem Analyzer, Planner, and Expert Agents">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Why This Matters -->
+    <section class="section project-abstract">
+      <div class="container">
+        <h2 class="section-heading">Why This Matters</h2>
+        <p>When AI systems encounter complex, multi-step problems in the real world, such as analyzing financial reports or answering questions that require calculation and judgment, they often fail silently or give wrong answers without explanation. ProSEA is a multi-agent framework that solves problems through iterative exploration: when one approach fails, the system learns from the failure and adapts its strategy, much like a human expert would.</p>
+      </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="section project-problem">
+      <div class="container">
+        <h2 class="section-heading">The Problem</h2>
+        <p>Existing AI agent frameworks struggle with complex reasoning tasks that require decomposition, calculation, and judgment. Standard approaches like RAG pipelines and ReAct agents either retrieve the wrong information, fail to perform multi-step calculations accurately, or cannot adapt when their initial approach does not work.</p>
+        <p>A key limitation is that prior multi-agent systems do not propagate structured failure feedback. When an agent fails, the system typically just retries or gives up, rather than learning from the specific reason for failure and adjusting the plan accordingly.</p>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="section project-method">
+      <div class="container">
+        <h2 class="section-heading">Approach</h2>
+        <p>ProSEA introduces a hierarchical multi-agent architecture with four principal components:</p>
+        <ul class="contributions-list">
+          <li><strong>Manager Agent</strong>:the central orchestrator that receives queries, coordinates information flow, and makes decisions about when to replan.</li>
+          <li><strong>Problem Analyzer</strong>:performs preliminary analysis, extracting constraints and assumptions from the problem statement.</li>
+          <li><strong>Planner</strong>:generates multi-step solution strategies with task decomposition, and can regenerate plans based on feedback.</li>
+          <li><strong>Expert Agents</strong>:domain-specialized agents that execute individual steps through reasoning, tool usage, and user interaction.</li>
+        </ul>
+        <p>The key innovation is the iterative exploration mechanism: Expert Agents report not only success or failure but also detailed reasons for failure and newly discovered constraints. The Manager Agent processes this structured feedback and triggers adaptive replanning, generating new hypotheses that account for discoveries made during previous iterations. This cycle continues until either a complete solution is found or sufficient exploration has been performed.</p>
+        <p>The framework operates autonomously while also supporting human collaboration when needed.</p>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section project-results">
+      <div class="container">
+        <h2 class="section-heading">Key Results</h2>
+        <p>Evaluated on the <strong>FinanceBench</strong> benchmark (150 curated financial questions requiring comprehension of 10-Ks, 10-Qs, 8-Ks, and earnings reports):</p>
+        <ul class="contributions-list">
+          <li><strong>ProSEA achieved 93.2% overall accuracy</strong>, compared to LlamaIndex RAG (56.7%), LangChain ReAct (81.6%), and OpenAI Assistants (42.7%).</li>
+          <li><strong>State-of-the-art on four difficulty categories:</strong> 0-RETRIEVE: 98%, 1-COMPARE: 100%, 2-CALC-CHANGE: 100%, 5-EXPLAIN-FACTORS: 100%.</li>
+          <li><strong>Comparable to DANA (95.3%)</strong> while operating fully autonomously, without requiring the extensive domain engineering that DANA depends on.</li>
+          <li>On 3-CALC-COMPLEX, ProSEA scored 95% vs. DANA's 100%.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section project-impact">
+      <div class="container">
+        <h2 class="section-heading">Impact</h2>
+        <p>ProSEA has been validated in enterprise settings and demonstrates that a general-purpose multi-agent framework with adaptive replanning can achieve performance comparable to domain-engineered systems. The framework's modular design means it can be applied to domains beyond finance. The paper presents a new paradigm for AI problem-solving where structured failure feedback drives exploration rather than mere retries.</p>
+      </div>
+    </section>
+
+    <!-- Citation -->
+    <section class="section project-citation">
+      <div class="container">
+        <h2 class="section-heading">Citation</h2>
+        <pre class="citation-block"><code>@article{nguyen2025prosea,
+  title={ProSEA: Problem Solving via Exploration Agents},
+  author={Nguyen, William and Luong, Vinh and Nguyen, Christopher},
+  journal={arXiv preprint arXiv:2510.07423},
+  year={2025}
+}</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>This website uses source code from <a href="https://jonbarron.info" target="_blank" rel="noopener noreferrer">jonbarron.info</a> and <a href="https://www.yapengtian.com" target="_blank" rel="noopener noreferrer">yapengtian.com</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+  (function() {
+    var toggle = document.querySelector('.nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', function() {
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('nav-open');
+    });
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('nav-open');
+      });
+    });
+  })();
+  </script>
+</body>
+
+</html>
